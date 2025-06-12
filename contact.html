@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script>
+        const form = document.getElementById("contact-form");
+        const thanks = document.getElementById("thanks");
+
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+
+            fetch("https://formsubmit.co/your@email.com", {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        form.reset();
+                        thanks.style.display = "block";
+                    } else {
+                        alert("There was a problem submitting your form. Please try again.");
+                    }
+                })
+                .catch(error => {
+                    alert("Error: " + error.message);
+                });
+        });
+    </script>
+    <title>Abby</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="home.html">Abby</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="work.html">Experience</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="contact">
+        <div class="contact-container">
+            <div class="contact-card">
+                <div class="contact-left">
+                    <h2>Contact</h2>
+                    <p>
+                        I'd love to hear from you. Whether it's a project opportunity or just a quick message, feel free to reach out
+                    </p>
+                    <p class="contact-info">
+                        <a href="mailto:hoangphuonganhho@gmail.com">hoangphuonganhho@gmail.com</a><br> 📞: 236 591 3322
+                    </p>
+                    <div class="media">
+                        <a href="https://www.linkedin.com/in/hoang-phuong-anh-ho-a135b027a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BX%2F9HuMU1SpiRe0cd5xqyVQ%3D%3D" aria-label="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/hoang-phuong-anh-ho-a135b027a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BX%2F9HuMU1SpiRe0cd5xqyVQ%3D%3D" aria-label="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://wa.me/2365913322" aria-label="whatsapp " target="_blank "><i class="fa-brands fa-whatsapp "></i></a>
+                    </div>
+                </div>
+                <form class="contact-right" action="https://formsubmit.co/hoangphuonganhho@gmail.com" method="POST">
+                    <div class="name-row">
+                        <div class="field">
+                            <label for="first">Full name</label>
+                            <input id="first" type="text" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" required>
+                    </div>
+                    <div class="field">
+                        <label for="phone">Phone</label>
+                        <input id="phone" type="tel">
+                    </div>
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send</button>
+                </form>
+
+            </div>
+
+            <div id="thanks">✅ Thank you! Your message has been sent.</div>
+
+        </div>
+    </section>
+
+    <footer class="footer ">
+        <p>© 2025 Hoang Phuong Anh Ho</p>
+        <p>All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

@@ -5,6 +5,44 @@ body {
     line-height: 1.6;
 }
 
+
+/* Flex only for the top bar */
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 1rem;
+}
+
+
+/* Hide nav by default on small screens */
+
+nav {
+    display: none;
+    background-color: #111;
+    text-align: center;
+}
+
+
+/* Show nav when active */
+
+nav.active {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 1.2rem;
+}
+
 nav ul {
     padding: 0;
     margin: 0;
@@ -32,6 +70,14 @@ nav a,
     text-decoration: none;
     font-weight: 500;
     padding-right: 30px;
+}
+
+.navToggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
 }
 
 header {
@@ -507,8 +553,23 @@ a:hover i {
 }
 
 @media (max-width: 768px) {
-    .logo {
-        padding-top: 1em;
+    .navToggle {
+        display: block;
+    }
+    .navLinks {
+        display: none;
+        width: 100%;
+    }
+    .navLinks ul {
+        flex-direction: column;
+        padding: 1rem;
+        background: #222;
+    }
+    .navLinks.active {
+        display: block;
+    }
+    nav ul {
+        gap: 0.5rem;
     }
     nav ul {
         padding: 0.5em;

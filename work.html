@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="toggle.js"></script>
     <style>
         body {
             background-image: url('image/basic.png');
@@ -20,10 +21,16 @@
 
 <body>
     <header>
-        <div class="logo">
-            <a href="index.html">Abby</a>
+        <div class="top-bar">
+            <div class="logo">
+                <a href="index.html">Abby</a>
+            </div>
+            <button class="navToggle" aria-label="Toggle navigation">
+                ☰
+              </button>
         </div>
-        <nav>
+
+        <nav class="navLinks">
             <ul>
                 <li><a href="about.html">About</a></li>
                 <li><a href="work.html">Experience</a></li>

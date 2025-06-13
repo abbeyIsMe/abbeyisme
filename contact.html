@@ -7,35 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="toggle.js"></script>
-    <script>
-        const form = document.getElementById("contact-form");
-        const thanks = document.getElementById("thanks");
 
-        form.addEventListener("submit", function(e) {
-            e.preventDefault();
-
-            const formData = new FormData(form);
-
-            fetch("https://formsubmit.co/your@email.com", {
-                    method: "POST",
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                })
-                .then(response => {
-                    if (response.ok) {
-                        form.reset();
-                        thanks.style.display = "block";
-                    } else {
-                        alert("There was a problem submitting your form. Please try again.");
-                    }
-                })
-                .catch(error => {
-                    alert("Error: " + error.message);
-                });
-        });
-    </script>
     <title>Abby</title>
 
 </head>

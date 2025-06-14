@@ -26,6 +26,9 @@ nav.active {
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: clamp(0.5rem, 2vw, 2rem);
 }
 
 nav a {
@@ -41,7 +44,6 @@ nav ul {
 }
 
 nav ul li {
-    padding: 0.5em;
     text-align: center;
 }
 
@@ -50,7 +52,6 @@ nav ul li {
     color: #fff;
     font-size: 1.3em;
     font-family: "Comfortaa", sans-serif;
-    font-optical-sizing: auto;
     font-style: normal;
 }
 
@@ -72,6 +73,8 @@ nav a,
 
 header {
     background: #111;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
 }
 
 header nav a:hover {
@@ -370,8 +373,8 @@ p .skills {
 /* Contact Page */
 
 #contact {
-    padding: 4em 10em;
-    background-image: url('image/contact.JPG');
+    padding: 4em 9em;
+    background-image: url('image/contac\(grantrobertdavies\).jpg');
     /* alt: Grant Davieas */
     background-size: cover;
     background-repeat: no-repeat;
@@ -489,11 +492,12 @@ a:hover i {
 
 @media (min-width: 768px) {
     header {
+        position: sticky;
+        top: 0;
         display: grid;
         grid-template-columns: max-content 1fr max-content;
         align-items: center;
         grid-template-areas: "logo . nav";
-        padding: 1em 0.5em;
     }
     header .logo {
         grid-area: logo;
@@ -515,7 +519,7 @@ a:hover i {
     nav ul {
         display: flex;
         justify-content: flex-end;
-        gap: 2rem;
+        gap: 1em;
     }
     /*Experiences*/
     .experience-text h4 {
@@ -542,6 +546,13 @@ a:hover i {
 }
 
 @media (max-width: 768px) {
+    header {
+        position: sticky;
+        top: 0;
+        background: #111;
+        color: white;
+        z-index: 9999;
+    }
     .abby-bg {
         background-position: right center;
     }

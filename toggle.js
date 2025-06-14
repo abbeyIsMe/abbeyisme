@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         element.style.opacity = 0;
 
         requestAnimationFrame(() => {
-            element.style.transition = 'height 0.4s ease, opacity 0.5s ease';
+            element.style.transition = 'height 0.8s ease, opacity 0.5s ease';
             element.style.height = height;
             element.style.opacity = 1;
             element.classList.add('open');

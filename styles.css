@@ -255,7 +255,7 @@ nav a:hover {
 
 .approach-block p {
     font-size: 1rem;
-    font-style: italic;
+    line-height: 1.5;
     color: #333;
 }
 

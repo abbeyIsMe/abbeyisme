@@ -297,6 +297,11 @@ nav a:hover {
     max-width: fit-content;
 }
 
+.Downloadbutton a:hover {
+    color: #fff;
+    transition: 0.3s;
+}
+
 
 /* Project Page*/
 

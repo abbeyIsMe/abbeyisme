@@ -256,7 +256,8 @@ nav a:hover {
 .approach-block p {
     font-size: 1rem;
     line-height: 1.5;
-    color: #333;
+    font-style: #333;
+    font-style: italic;
 }
 
 .experience-image img {

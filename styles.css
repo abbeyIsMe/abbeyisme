@@ -24,14 +24,6 @@ nav.active {
     display: block;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: flex-end;
-    gap: clamp(0.5rem, 2vw, 2rem);
-}
-
 nav a {
     text-decoration: none;
     color: #ccc;
@@ -51,7 +43,7 @@ nav ul li {
 .logo {
     font-weight: bold;
     color: #fff;
-    font-size: 5em;
+    font-size: 1.3em;
     font-family: "Comfortaa", sans-serif;
     font-style: normal;
 }
@@ -231,6 +223,11 @@ nav a:hover {
     position: relative;
     display: inline-block;
     cursor: pointer;
+    list-style-type: none;
+}
+
+.edu-item li {
+    list-style-type: none;
 }
 
 .edu-popup {
@@ -590,6 +587,12 @@ a:hover i {
         color: white;
         z-index: 9999;
         font-size: 0.4em;
+    }
+    .logo a {
+        font-size: 1.5rem;
+        margin-left: 1.5em;
+        padding-right: 30px;
+        /* Reduced size for tablets/mobile */
     }
     .abby-bg {
         background-position: right center;

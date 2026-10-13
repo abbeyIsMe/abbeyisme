@@ -10,6 +10,7 @@ body {
     margin: 0;
     font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
+    background: #f4f6f4;
 }
 
 .sr-only {
@@ -183,7 +184,7 @@ nav a.active {
 
 .wrapUp {
     position: sticky;
-    top: 100px;
+    top: 120px;
     z-index: 1;
     background: #2d5a3d;
     color: white;
@@ -254,7 +255,7 @@ nav a.active {
 .section p,
 .section li {
     font-size: 0.95rem;
-    color: #333;
+    color: #1a2420;
 }
 
 .section a {
@@ -270,7 +271,7 @@ nav a.active {
     font-size: 0.85rem;
     margin: 2em;
     color: #2d5a3d;
-    border-top: 2px solid;
+    border-top: 2px solid #ccd8cc;
 }
 
 .edu-item {
@@ -303,7 +304,7 @@ li.edu-item {
     width: min(450px, 90vw);
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, .25);
-    border: 1px solid #ddd;
+    border: 1px solid #ccd8cc;
     background: #fff;
 }
 
@@ -325,7 +326,7 @@ li.edu-item {
 
 .experience-section h4 {
     font-weight: bold;
-    color: #5a8a72;
+    color: #5a6b60;
     text-align: center;
     margin: 3em 0 0 0;
 }
@@ -343,7 +344,7 @@ li.edu-item {
 .approach-block p {
     font-size: 1rem;
     line-height: 1.5;
-    color: #333;
+    color: #1a2420;
     font-style: italic;
 }
 
@@ -439,8 +440,8 @@ p .skills {
 }
 
 .skills span {
-    background-color: #2d5a3d;
-    color: white;
+    background-color: #7eb89a;
+    color: #1a2420;
     padding: 0.3em 0.8em;
     border-radius: 999px;
     font-size: 0.9rem;
@@ -450,7 +451,8 @@ p .skills {
 }
 
 .skills span:hover {
-    background-color: black;
+    background-color: #2d5a3d;
+    color: #ffffff;
 }
 
 
@@ -609,7 +611,7 @@ a:hover i {
     }
     /*Experiences*/
     .experience-text h4 {
-        color: #5a8a72;
+        color: #5a6b60;
         text-align: center;
     }
     .experience-container {

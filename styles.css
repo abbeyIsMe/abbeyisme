@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+:root {
+    --primary: #2d5a3d;
+    --accent: #7eb89a;
+    --nav-bg: #1e2d24;
+    --hover: #243f2f;
+}
+
 body {
     margin: 0;
     font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
@@ -18,13 +25,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #111;
+    background-color: #1e2d24;
     padding: 1rem;
 }
 
 nav {
     display: none;
-    background-color: #111;
+    background-color: #1e2d24;
     text-align: center;
 }
 
@@ -43,7 +50,7 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: #ccc;
+    color: rgba(255, 255, 255, 0.75);
 }
 
 nav ul li {
@@ -63,7 +70,7 @@ nav ul li {
 
 nav a,
 .logo a {
-    color: #ccc;
+    color: rgba(255, 255, 255, 0.75);
     margin-left: 1.5em;
     text-decoration: none;
     padding-right: 30px;
@@ -79,17 +86,17 @@ nav a,
 }
 
 header {
-    background: #111;
+    background: #1e2d24;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     transition: box-shadow 0.3s ease;
 }
 
 header nav a:hover {
-    color: #c14d43;
+    color: #7eb89a;
 }
 
 nav a.active {
-    color: #f90;
+    color: #7eb89a;
 }
 
 .btn {
@@ -100,13 +107,13 @@ nav a.active {
     font-weight: 600;
     text-decoration: none;
     color: #fff;
-    background: #234e35;
+    background: #2d5a3d;
     border-radius: 999px;
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .btn:hover {
-    background: #1a3b28;
+    background: #243f2f;
     transform: translateY(-1px);
 }
 
@@ -166,7 +173,7 @@ nav a.active {
 .intro {
     display: flex;
     flex-direction: column;
-    background: #234e35;
+    background: #2d5a3d;
     color: white;
     padding: 2rem;
     border-radius: 20px;
@@ -176,14 +183,15 @@ nav a.active {
 
 .wrapUp {
     position: sticky;
-    top: 80px;
+    top: 100px;
     z-index: 1;
-    background: #234e35;
+    background: #2d5a3d;
     color: white;
-    padding: 2rem;
+    padding: 3rem;
     border-radius: 20px;
     text-align: center;
     height: fit-content;
+    /* margin-top: 3em; */
 }
 
 .intro img {
@@ -238,7 +246,7 @@ nav a.active {
 .contact-info h2,
 .contact-form h2 {
     font-size: 1rem;
-    color: #234e35;
+    color: #2d5a3d;
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
@@ -250,7 +258,7 @@ nav a.active {
 }
 
 .section a {
-    color: #234e35;
+    color: #2d5a3d;
 }
 
 .section strong {
@@ -261,7 +269,7 @@ nav a.active {
     text-align: center;
     font-size: 0.85rem;
     margin: 2em;
-    color: #234e35;
+    color: #2d5a3d;
     border-top: 2px solid;
 }
 
@@ -317,7 +325,7 @@ li.edu-item {
 
 .experience-section h4 {
     font-weight: bold;
-    color: #999999;
+    color: #5a8a72;
     text-align: center;
     margin: 3em 0 0 0;
 }
@@ -357,7 +365,7 @@ li.edu-item {
 }
 
 .Downloadbutton {
-    background-color: #234e35;
+    background-color: #2d5a3d;
     border-radius: 12px;
     border: none;
     color: #ccc;
@@ -431,7 +439,7 @@ p .skills {
 }
 
 .skills span {
-    background-color: #277137;
+    background-color: #2d5a3d;
     color: white;
     padding: 0.3em 0.8em;
     border-radius: 999px;
@@ -477,7 +485,7 @@ p .skills {
     margin-top: 0;
     margin-bottom: 0.83em;
     font-size: 1.8rem;
-    color: #234e35;
+    color: #2d5a3d;
 }
 
 .contact-left p {
@@ -486,7 +494,7 @@ p .skills {
 }
 
 .contact-info a {
-    color: #234e35;
+    color: #2d5a3d;
     text-decoration: none;
 }
 
@@ -523,7 +531,7 @@ p .skills {
 .submit-btn {
     margin-top: 1.5em;
     padding: 0.8em;
-    background: #234e35;
+    background: #2d5a3d;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -532,7 +540,7 @@ p .skills {
 }
 
 .submit-btn:hover {
-    background: #1f4430;
+    background: #243f2f;
 }
 
 .media {
@@ -543,7 +551,7 @@ p .skills {
 }
 
 .media a:hover {
-    color: #1f4430;
+    color: #243f2f;
 }
 
 a i {
@@ -601,7 +609,7 @@ a:hover i {
     }
     /*Experiences*/
     .experience-text h4 {
-        color: #999999;
+        color: #5a8a72;
         text-align: center;
     }
     .experience-container {
@@ -627,7 +635,7 @@ a:hover i {
     header {
         position: sticky;
         top: 0;
-        background: #111;
+        background: #1e2d24;
         color: white;
         z-index: 9999;
         /* font-size: 0.4em; */
@@ -646,7 +654,7 @@ a:hover i {
     .navLinks ul {
         flex-direction: column;
         padding: 1rem;
-        background: #222;
+        background: #1e2d24;
     }
     .navLinks.active {
         display: block;

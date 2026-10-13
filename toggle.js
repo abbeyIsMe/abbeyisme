@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
+    toggle.setAttribute('aria-expanded', 'false');
+
     toggle.addEventListener('click', () => {
         if (nav.classList.contains('open')) {
             collapse(nav);
@@ -29,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             element.style.height = height;
             element.style.opacity = 1;
             element.classList.add('open');
+            toggle.setAttribute('aria-expanded', 'true');
         });
     }
 
@@ -43,9 +46,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         element.addEventListener('transitionend', function handleTransitionEnd() {
-            element.classList.remove('open');
-            element.style.display = 'none';
+            reset(element);
             element.removeEventListener('transitionend', handleTransitionEnd);
         });
     }
+
+    // Hand control back to the stylesheet so the desktop layout isn't stuck with mobile inline styles
+    function reset(element) {
+        element.classList.remove('open');
+        element.removeAttribute('style');
+        toggle.setAttribute('aria-expanded', 'false');
+    }
+
+    window.matchMedia('(min-width: 768px)').addEventListener('change', () => reset(nav));
 });

@@ -16,7 +16,7 @@
             font-style: italic;
         }
     </style>
-    <title>Abbey</title>
+    <title>Contact | Abbey Ho</title>
     <link rel="icon" type="image/png" href="image/favicon.png">
     <meta name="description" content="Reach out to Abbey for work, or just to say hello">
 </head>
@@ -37,7 +37,7 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="work.html">Experience</a></li>
                 <li><a href="project.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -46,7 +46,7 @@
         <div class="contact-container">
             <div class="contact-card">
                 <div class="contact-left">
-                    <h2>Contact</h2>
+                    <h1>Contact</h1>
                     <p>
                         I'd love to hear from you. Whether it's a project opportunity or just a quick message, feel free to reach out
                     </p>
@@ -54,9 +54,9 @@
                         ✉️ <a href="mailto:hoangphuonganhho@gmail.com"> hoangphuonganhho@gmail.com</a><br> 📞 236 591 3322
                     </p>
                     <div class="media">
-                        <a href="https://www.linkedin.com/in/hoang-phuong-anh-ho-a135b027a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BX%2F9HuMU1SpiRe0cd5xqyVQ%3D%3D" aria-label="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/hoang-phuong-anh-ho-a135b027a" aria-label="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="https://www.instagram.com/iamabbeyyyy/" aria-label="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://wa.me/2365913322" aria-label="whatsapp " target="_blank "><i class="fa-brands fa-whatsapp "></i></a>
+                        <a href="https://wa.me/12365913322" aria-label="WhatsApp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
                     </div>
                 </div>
                 <form method="POST" action="https://formsubmit.co/hoangphuonganhho@gmail.com" class="contact-right">
@@ -86,16 +86,24 @@
 
             </div>
 
-            <div id="thanks" style="display: none; margin-top: 1rem; color: green; font-weight: bold;">
+            <div id="thanks">
                 Thank you! Your message has been sent.
             </div>
         </div>
     </section>
 
     <footer class="footer ">
-        <p>© 2025 Hoang Phuong Anh Ho</p>
+        <p>© 2026 Hoang Phuong Anh Ho</p>
         <p>All rights reserved.</p>
     </footer>
+    <script>
+        // FormSubmit needs a full URL to return to, so build it from wherever the page is hosted
+        document.querySelector('input[name="_next"]').value = location.origin + location.pathname + '?sent=1#thanks';
+
+        if (new URLSearchParams(location.search).has('sent')) {
+            document.getElementById('thanks').style.display = 'block';
+        }
+    </script>
 </body>
 
 </html>

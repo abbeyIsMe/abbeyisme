@@ -1,8 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
 }
 
 .top-bar {
@@ -29,17 +38,12 @@ nav ul {
     display: flex;
     justify-content: flex-end;
     gap: clamp(0.5rem, 2vw, 2rem);
+    margin: 0;
 }
 
 nav a {
     text-decoration: none;
     color: #ccc;
-}
-
-nav ul {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
 }
 
 nav ul li {
@@ -64,7 +68,6 @@ nav a,
     text-decoration: none;
     padding-right: 30px;
     /* font-size: clamp(0.95rem, 1.5vw, 1.25rem); */
-    text-decoration: none;
 }
 
 .navToggle {
@@ -85,9 +88,22 @@ header nav a:hover {
     color: #c14d43;
 }
 
-nav a.active,
-nav a:hover {
+nav a.active {
     color: #f90;
+}
+
+.knowMe {
+    position: absolute;
+    left: 65%;
+    top: 75%;
+}
+
+.knowMe a {
+    text-decoration: none;
+    color: #5f766d;
+    font-weight: 900;
+    font-family: Playwrite NG Modern, cursive;
+    font-style: italic;
 }
 
 .abby-box h1 {
@@ -102,7 +118,6 @@ nav a:hover {
 .abby-section {
     position: relative;
     min-height: 100vh;
-    padding-top: 80px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -152,7 +167,6 @@ nav a:hover {
     border-radius: 20px;
     align-items: center;
     text-align: center;
-    text-align: center;
 }
 
 .wrapUp {
@@ -173,6 +187,15 @@ nav a:hover {
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 1rem;
+}
+
+.blur-up {
+    filter: blur(6px);
+    transition: filter 0.4s ease;
+}
+
+.blur-up.loaded {
+    filter: none;
 }
 
 .intro h1 {
@@ -236,8 +259,13 @@ nav a:hover {
     cursor: pointer;
 }
 
-.edu-item ul {
+.edu-courses ul {
     list-style-type: none;
+}
+
+li.edu-item {
+    display: block;
+    width: fit-content;
 }
 
 .edu-popup {
@@ -252,14 +280,15 @@ nav a:hover {
 }
 
 .edu-popup img {
-    width: 450px;
+    width: min(450px, 90vw);
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, .25);
     border: 1px solid #ddd;
     background: #fff;
 }
 
-.edu-item:hover .edu-popup {
+.edu-item:hover .edu-popup,
+.edu-item:focus .edu-popup {
     opacity: 1;
     visibility: visible;
 }
@@ -294,13 +323,12 @@ nav a:hover {
 .approach-block p {
     font-size: 1rem;
     line-height: 1.5;
-    font-style: #333;
+    color: #333;
     font-style: italic;
 }
 
 .experience-image img {
     width: 100%;
-    height: 100%;
     height: auto;
     object-fit: cover;
     transition: transform 0.3s ease;
@@ -319,26 +347,19 @@ nav a:hover {
     background-color: #234e35;
     border-radius: 12px;
     border: none;
-    color: white;
-    padding: 20px;
+    color: #ccc;
+    padding: 30px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-}
-
-.Downloadbutton a {
-    color: #ccc;
-    text-decoration: none;
-    padding: 10px;
-    max-width: fit-content;
-}
-
-.Downloadbutton a:hover {
-    color: #fff;
     transition: 0.3s;
+}
+
+.Downloadbutton:hover {
+    color: #fff;
 }
 
 
@@ -385,7 +406,6 @@ nav a:hover {
     border-radius: 10px;
     object-fit: cover;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-    object-fit: cover;
     transition: transform 0.3s ease;
 }
 
@@ -410,7 +430,6 @@ p .skills {
 
 .skills span:hover {
     background-color: black;
-    cursor: pointer;
 }
 
 
@@ -441,8 +460,9 @@ p .skills {
     box-shadow: 0 6px 20px #4a4a42;
 }
 
-.contact-left h2 {
+.contact-left h1 {
     margin-top: 0;
+    margin-bottom: 0.83em;
     font-size: 1.8rem;
     color: #234e35;
 }
@@ -589,7 +609,7 @@ a:hover i {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     header {
         position: sticky;
         top: 0;
@@ -599,11 +619,21 @@ a:hover i {
         /* font-size: 0.4em; */
     }
     .knowMe {
-        font-size: 0.5em;
-        display: none;
+        left: 0;
+        right: 0;
+        top: 80%;
+        margin: 0;
+        padding: 0 1em;
+        text-align: center;
+        font-size: 0.9em;
     }
     .abby-bg {
         background-position: right center;
+    }
+    .edu-popup {
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     .navToggle {
         display: block;
@@ -622,8 +652,6 @@ a:hover i {
     }
     nav ul {
         gap: 0.5rem;
-    }
-    nav ul {
         padding: 0.5em;
     }
     /* project Pgage*/
@@ -648,9 +676,6 @@ a:hover i {
         margin-top: 1em;
     }
     /*Contact Page*/
-    .contact-container {
-        grid-template-columns: 1fr;
-    }
     .contact-info {
         margin-top: 2em;
     }

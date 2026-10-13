@@ -92,18 +92,22 @@ nav a.active {
     color: #f90;
 }
 
-.knowMe {
-    position: absolute;
-    left: 65%;
-    top: 75%;
+.btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.85rem 1.75rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    background: #234e35;
+    border-radius: 999px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.knowMe a {
-    text-decoration: none;
-    color: #5f766d;
-    font-weight: 900;
-    font-family: Playwrite NG Modern, cursive;
-    font-style: italic;
+.btn:hover {
+    background: #1a3b28;
+    transform: translateY(-1px);
 }
 
 .abby-box h1 {
@@ -133,6 +137,7 @@ nav a.active {
     width: 100%;
     height: 100%;
     background: url('image/background.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
     /*Image by Becca Clark from Pixabay*/
 }
 
@@ -171,21 +176,22 @@ nav a.active {
 
 .wrapUp {
     position: sticky;
-    top: 100px;
+    top: 80px;
+    z-index: 1;
     background: #234e35;
     color: white;
     padding: 2rem;
     border-radius: 20px;
     text-align: center;
     height: fit-content;
-    margin: 9em 0;
 }
 
 .intro img {
-    width: 160px;
-    height: 220px;
+    width: clamp(140px, 40%, 200px);
+    height: auto;
+    aspect-ratio: 3 / 4;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 14px;
     margin-bottom: 1rem;
 }
 
@@ -199,13 +205,15 @@ nav a.active {
 }
 
 .intro h1 {
-    font-size: 1.8rem;
+    margin: 0.5rem 0 0;
+    font-size: 1.35rem;
 }
 
 .intro h2 {
-    font-size: 1rem;
+    margin: 0.75rem 0 0;
+    font-size: 0.92rem;
     font-weight: 400;
-    margin-top: 0.5rem;
+    opacity: 0.8;
 }
 
 .details {
@@ -241,6 +249,10 @@ nav a.active {
     color: #333;
 }
 
+.section a {
+    color: #234e35;
+}
+
 .section strong {
     color: #111;
 }
@@ -269,10 +281,10 @@ li.edu-item {
 }
 
 .edu-popup {
-    position: absolute;
-    left: 55%;
+    position: fixed;
+    left: 50%;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
     opacity: 0;
     visibility: hidden;
     transition: .25s ease;
@@ -336,7 +348,8 @@ li.edu-item {
 
 .experience-image {
     flex: 0 0 40%;
-    height: 100vh;
+    max-height: 60vh;
+    overflow: hidden;
     padding-top: 3em;
     display: flex;
     align-items: center;
@@ -436,8 +449,8 @@ p .skills {
 /* Contact Page */
 
 #contact {
-    padding: 4em 9em;
-    background-image: url('image/contac\(grantrobertdavies\).jpg');
+    padding: 4em clamp(2rem, 8vw, 9em);
+    background-image: url('image/contact-bg.jpg');
     /* alt: Grant Davieas */
     background-size: cover;
     background-repeat: no-repeat;
@@ -558,6 +571,7 @@ a:hover i {
     header {
         position: sticky;
         top: 0;
+        z-index: 100;
         display: grid;
         grid-template-columns: max-content 1fr max-content;
         align-items: center;
@@ -618,22 +632,9 @@ a:hover i {
         z-index: 9999;
         /* font-size: 0.4em; */
     }
-    .knowMe {
-        left: 0;
-        right: 0;
-        top: 80%;
-        margin: 0;
-        padding: 0 1em;
-        text-align: center;
-        font-size: 0.9em;
-    }
     .abby-bg {
         background-position: right center;
-    }
-    .edu-popup {
-        position: fixed;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        background-attachment: scroll;
     }
     .navToggle {
         display: block;

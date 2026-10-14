@@ -102,7 +102,14 @@
                 </div>
 
                 <div class="experience-image">
-                    <img src="image/kasturi-roy-cZ8WFM_C574-unsplash.jpg" alt="Illustrative workspace">
+                    <div class="carousel">
+                        <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+                        <div class="carousel-track">
+                            <img src="image/kasturi-roy-cZ8WFM_C574-unsplash.jpg" alt="Workspace photo 1" class="carousel-slide active">
+                        </div>
+                        <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+                    </div>
+                    <!-- To add more photos: insert <img src="image/YOUR_FILE.jpg" alt="description" class="carousel-slide"> inside .carousel-track -->
                 </div>
             </div>
         </section>
@@ -111,6 +118,18 @@
         <p>© 2026 Hoang Phuong Anh Ho</p>
         <p>All rights reserved.</p>
     </footer>
+    <script>
+        const slides = document.querySelectorAll('.carousel-slide');
+        let current = 0;
+
+        function goTo(n) {
+            slides[current].classList.remove('active');
+            current = (n + slides.length) % slides.length;
+            slides[current].classList.add('active');
+        }
+        document.querySelector('.carousel-btn.prev').addEventListener('click', () => goTo(current - 1));
+        document.querySelector('.carousel-btn.next').addEventListener('click', () => goTo(current + 1));
+    </script>
 </body>
 
 </html>

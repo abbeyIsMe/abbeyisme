@@ -280,7 +280,8 @@ nav a.active {
 
 .edu-item {
     position: relative;
-    display: inline-block;
+    display: block;
+    width: fit-content;
     cursor: pointer;
 }
 

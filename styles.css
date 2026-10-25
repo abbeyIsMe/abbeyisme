@@ -520,6 +520,7 @@ li.edu-item {
 
 .skills-block,
 .skills-group .skills,
+.projectText>.skills,
 p .skills {
     display: flex;
     flex-wrap: wrap;

@@ -331,7 +331,8 @@ nav a.active {
 
 .edu-item {
     position: relative;
-    display: inline-block;
+    display: block;
+    width: fit-content;
     cursor: pointer;
     text-decoration: underline dotted var(--muted);
     text-underline-offset: 4px;

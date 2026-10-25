@@ -44,204 +44,199 @@
     </header>
 
     <section id="projects">
-        <h1 class="sr-only">Projects</h1>
-        <h4 style="color: #5a6b60;text-align: center;">Hands-on work where I applied my skills</h4>
+        <h1>Projects</h1>
+        <p class="projects-sub">Hands-on work where I applied my skills</p>
 
-        <div class="projects">
-            <div class="projectGrid">
-                <div class="projectText">
+        <div class="filters" role="group" aria-label="Filter projects">
+            <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">All (9)</button>
+            <button type="button" class="filter-btn" data-filter="coordination" aria-pressed="false">Coordination &amp; Leadership</button>
+            <button type="button" class="filter-btn" data-filter="technical" aria-pressed="false">IT &amp; Technical</button>
+        </div>
+
+        <div class="project-list">
+            <article class="project-card featured" data-category="coordination technical">
+                <img src="image/exp/talentscreen-trello.png" alt="TalentScreen AI team's Trello board with sprint task columns" loading="lazy">
+                <div class="project-body">
+                    <span class="featured-badge">★ Featured project</span>
+                    <span class="project-tag">Coordination · Technical</span>
+
                     <h3>TalentScreen AI</h3>
-                    <h4>AI Recruitment & CV Screening Platform</h4>
-                    <p>An AI-powered recruitment platform that automates CV screening using LLM scoring with confidence scores and a rubric-based evaluation pipeline. Built with LangGraph for agentic workflows and OCR support for bilingual (Vietnamese/English)
-                        CVs.
+                    <p class="project-desc">An AI recruitment platform that screens CVs with LLM scoring and a rubric-based pipeline, with OCR for Vietnamese and English CVs. As Product Owner/PM and QA, I wrote the project charter and user stories, ran user interviews, and designed test cases and ran acceptance testing.
                     </p>
-                    <p><strong>Role:</strong> Business Analyst & Frontend Contributor — wrote project charter, user stories, conducted user interviews and case study research.</p>
+                    <div class="metrics">
+                        <span class="metric">PO/PM &amp; QA</span>
+                        <span class="metric">Team of 4</span>
+                    </div>
                     <div class="skills">
                         <span>Python</span>
                         <span>LangGraph</span>
                         <span>LLM</span>
-                        <span>OCR</span>
-                        <span>LangSmith</span>
-                        <span>Node.js</span>
                         <span>BA / User Research</span>
                     </div>
-                    <br>
-                    <a href="https://talentscreenai.duckdns.org" target="_blank" class="Downloadbutton">View Live Demo →</a>
-                </div>
-                <div class="projectImage">
-                    <img src="image/exp/talentscreen-trello.png" alt="TalentScreen AI screenshot" loading="lazy" width="300" height="200">
-                </div>
-            </div>
-
-            <h3>🗂️ Project Coordination & Leadership</h3>
-            <div class="projectGrid">
-                <div class="projectText">
-                    <h4>IT Solution Proposal – Team Lead</h4>
-                    <p>Led a 4-person team to propose ERP/CRM systems for a bakery. Managed tasks, timeline, and final presentation</p>
-                    <div class="skillsGained">
-                        <p>
-                            <strong>Skills:</strong>
-                            <span class="skills">
-                            <span>Scheduling</span>
-                            <span>Team Leadership</span>
-                            <span>Documentation</span>
-                            <span>Business Analysis</span>
-                            <span>ERP/CRM Research</span>
-                            </span>
-                        </p>
+                    <div class="project-links">
+                        <a href="https://talentscreenai.duckdns.org" target="_blank" rel="noopener">Live demo →</a>
                     </div>
-
+                    <p class="project-note">🔒 Program project · code confidential</p>
                 </div>
-                <div class="projectImage">
-                    <img src="image/projects/ITSolution.jpg" alt="Screenshot of the IT solution proposal project">
-                </div>
-            </div>
+            </article>
 
-            <div class="projectGrid">
-                <div class="projectText">
-                    <h4>Resume Website Project – Solo</h4>
-                    <p>Designed and implemented a fully responsive personal resume website within 1 week. Managed all phases of the project lifecycle, including requirement gathering, UX/UI design, frontend development, and deployment. Scored 90/100 on performance
-                        metrics </p>
-                    <div class="skillsGained">
-                        <p>
-                            <strong>Skills:</strong>
-                            <span class="skills">
-                            <span>Project Scheduling</span>
-                            <span>Time Management</span>
-                            <span>Web Design</span>
-                            <span>HTML/CSS</span>
-                            <span>JavaScript</span>
-                            <span>Responsive Design</span>
-                            <span>Problem-Solving</span>
-                            </span>
-                        </p>
+            <article class="project-card" data-category="coordination">
+                <img src="image/projects/ITSolution.jpg" alt="Laptop showing the IT solution proposal's planning spreadsheet and slides" loading="lazy">
+                <div class="project-body">
+                    <span class="project-tag">Coordination</span>
+                    <h3>IT Solution Proposal</h3>
+                    <p class="project-desc">Led a 4-person team to recommend QuickBooks (ERP) and Salesforce (CRM) for a family bakery, including hardware, budget and rollout plan.</p>
+                    <div class="metrics">
+                        <span class="metric">Team lead · 4</span>
+                        <span class="metric">Within $15K budget</span>
+                    </div>
+                    <div class="skills">
+                        <span>Team Leadership</span>
+                        <span>Business Analysis</span>
+                        <span>ERP/CRM Research</span>
+                        <span>Scheduling</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="docs/IT-Solution-Proposal.pdf">Report (PDF) →</a>
                     </div>
                 </div>
-                <div class="projectImage">
-                    <img src="image/projects/solo.jpg" alt="Screenshot of Abby's resume website">
-                </div>
-            </div>
+            </article>
 
-            <div class="projectGrid">
-                <div class="projectText">
-                    <h4>CBRE PM Job Simulation – Forage</h4>
-                    <p>Completed a simulated Project Initiation phase in line with CBRE standards. Produced key deliverables including a stakeholder matrix, project risk register, and a Gantt chart outlining major milestones</p>
-                    <div class="skillsGained">
-                        <p>
-                            <strong>Skills:</strong>
-                            <span class="skills">
-                            <span>Project Initiation</span>
-                            <span>Gantt Chart Creation</span>
-                            <span>Risk Assessment</span>
-                            <span>Stakeholder Identification</span>
-                            <span>Time & Scope Planning</span>
-                            <span>Understanding of Project Life Cycle</span>
-                            </span>
-                        </p>
+            <article class="project-card" data-category="coordination">
+                <img src="image/projects/CBRE.png" alt="CBRE Project Management Job Simulation certificate for Hoang Phuong Anh Ho" loading="lazy">
+                <div class="project-body">
+                    <span class="project-tag">Coordination</span>
+                    <h3>CBRE PM Job Simulation – Forage</h3>
+                    <p class="project-desc">Completed a simulated project initiation phase to CBRE standards, producing a stakeholder matrix, risk register and Gantt chart.</p>
+                    <div class="metrics">
+                        <span class="metric">3 deliverables</span>
+                        <span class="metric">Completed Apr 2025</span>
+                    </div>
+                    <div class="skills">
+                        <span>Project Initiation</span>
+                        <span>Risk Assessment</span>
+                        <span>Gantt Charts</span>
+                        <span>Stakeholders</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://www.theforage.com/completion-certificates/PDmHHPmLyCgdQWzdt/STkypM8iMfn4Gk9BF_PDmHHPmLyCgdQWzdt_mpKmrJaf8K5uFZ62e_1744072152524_completion_certificate.pdf" target="_blank" rel="noopener">Certificate →</a>
                     </div>
                 </div>
-                <div class="projectImage">
-                    <img src="image/projects/CBRE.png" alt="CBRE Project Management Job Simulation certificate for Hoang Phuong Anh Ho">
-                </div>
-            </div>
+            </article>
 
-            <br><br>
-
-            <h3>💻 IT & Technical Projects</h3>
-            <div class="projectGrid">
-
-                <div class="projectText">
-                    <h4>QuicKey – Typing Speed Test Website</h4>
-                    <p>Built a typing test web app with a team, featuring dynamic leaderboards, using HTML, CSS, and SQL for backend data storage</p>
-                    <div class="skillsGained">
-                        <p>
-                            <strong>Skills:</strong>
-                            <span class="skills">
-                            <span>Full-Stack Web Development</span>
-                            <span>SQL</span>
-                            <span>PHP</span>
-                            <span>HTML/CSS</span>
-                            <span>JavaScript</span>
-                            <span>Responsive Design</span>
-                            <span>Problem-Solving</span>
-                            </span>
-                        </p>
+            <article class="project-card" data-category="technical">
+                <img src="image/projects/datacom.png" alt="Datacom Service Desk job simulation" loading="lazy">
+                <div class="project-body">
+                    <span class="project-tag">Technical</span>
+                    <h3>Datacom Service Desk Job Simulation – Forage</h3>
+                    <p class="project-desc">Handled a simulated network outage for Datacom's managed services team: triaged multiple client tickets by impact and urgency, logged and escalated incidents using ITIL, and wrote clear follow-up messages to affected users.</p>
+                    <div class="metrics">
+                        <span class="metric">Completed Apr 2025</span>
+                        <span class="metric">ITIL incident management</span>
+                    </div>
+                    <div class="skills">
+                        <span>IT Service Management</span>
+                        <span>Incident Triage</span>
+                        <span>Documentation</span>
+                        <span>Customer Communication</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://www.theforage.com/completion-certificates/gCW7Xki5Y3vNpBmnn/5qbJ4a5aDAPqM6tHD_gCW7Xki5Y3vNpBmnn_mpKmrJaf8K5uFZ62e_1745441605812_completion_certificate.pdf" target="_blank" rel="noopener">Certificate →</a>
                     </div>
                 </div>
-                <div class="projectImage">
-                    <!-- Photo by Rubaitul Azad on Unsplash -->
-                    <img src="image/projects/sql.jpg" alt="">
-                </div>
-            </div>
-            <div class="projectGrid">
-                <div class="projectText">
-                    <h4>Home Network Simulation</h4>
-                    <p>Designed a smart home network using Cisco Packet Tracer, implemented remote control features and IP setup</p>
-                    <div class="skillsGained">
-                        <p>
-                            <strong>Skills:</strong>
-                            <span class="skills">
-                            <span>Network Design</span>
-                            <span>IP Addressing</span>
-                            <span>Cisco Packet Tracer</span>
-                            <span>Network Security Basics</span>
-                            <span>Logical Planning</span>
-                            <span>Troubleshooting</span>
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <div class="projectImage">
-                    <!-- Illustrative photo by Adi Goldstein on Unsplash -->
-                    <img src="image/projects/networking.jpg" alt="">
-                </div>
-            </div>
+            </article>
 
-            <div class="projectGrid">
-                <div class="projectText">
-                    <h4>Unix Shell Scripting</h4>
-                    <p>Developed automation scripts for file search, log analysis, and web crawling</p>
-                    <div class="skillsGained">
-                        <p>
-                            <strong>Skills:</strong>
-                            <span class="skills">
-                            <span>Bash Scripting</span>
-                            <span>File Management Automation</span>
-                            <span>Looping & Conditionals</span>
-                            <span>Log Analysis</span>
-                            <span>Keyword Tracking</span>
-                            <span>Troubleshooting</span>
-                            </span>
-                        </p>
+            <article class="project-card" data-category="technical">
+                <!-- Photo by Rubaitul Azad on Unsplash -->
+                <img src="image/projects/sql.jpg" alt="MySQL logo key on an orange background" loading="lazy">
+                <div class="project-body">
+                    <span class="project-tag">Technical</span>
+                    <h3>QuicKey – Typing Speed Test Website</h3>
+                    <p class="project-desc">Built a typing speed test web app with a team, with dynamic leaderboards stored in SQL.</p>
+                    <div class="skills">
+                        <span>SQL</span>
+                        <span>PHP</span>
+                        <span>JavaScript</span>
+                        <span>HTML/CSS</span>
+                    </div>
+                    <p class="project-note">🔒 Team project · code private</p>
+                </div>
+            </article>
+
+            <article class="project-card" data-category="technical">
+                <!-- Photo by Gabriel Heinzer -->
+                <img src="image/projects/unix.jpg" alt="Terminal prompt on Ubuntu with a sudo command being typed" loading="lazy">
+                <div class="project-body">
+                    <span class="project-tag">Technical</span>
+                    <h3>Unix Shell Scripting</h3>
+                    <p class="project-desc">Wrote automation scripts for file search, log analysis and web crawling.</p>
+                    <div class="skills">
+                        <span>Bash Scripting</span>
+                        <span>Log Analysis</span>
+                        <span>File Automation</span>
+                        <span>Troubleshooting</span>
+                    </div>
+                    <p class="project-note">🔒 Course assignment · code not public</p>
+                </div>
+            </article>
+
+            <article class="project-card is-extra" data-category="coordination technical">
+                <img src="image/projects/solo.jpg" alt="Code editor showing the HTML of this resume website" loading="lazy">
+                <div class="project-body">
+                    <span class="project-tag">Coordination · Technical</span>
+                    <h3>Resume Website Project</h3>
+                    <p class="project-desc">Planned, designed and shipped this fully responsive portfolio solo in one week, from requirements and UX/UI to front-end build and deployment.</p>
+                    <div class="metrics">
+                        <span class="metric">90/100 performance</span>
+                        <span class="metric">1 week</span>
+                        <span class="metric">Solo</span>
+                    </div>
+                    <div class="skills">
+                        <span>HTML/CSS</span>
+                        <span>JavaScript</span>
+                        <span>Responsive Design</span>
+                        <span>Project Scheduling</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/abbeyIsMe/abbeyisme" target="_blank" rel="noopener">GitHub →</a>
                     </div>
                 </div>
-                <div class="projectImage">
-                    <!-- Photo by Gabriel Heinzer -->
-                    <img src="image/projects/unix.jpg" alt="">
-                </div>
-            </div>
-            <div class="projectGrid">
-                <div class="projectText">
-                    <h4>Linked List Operations in C++</h4>
-                    <p>Implemented a singly linked list with recursive insertion, deletion, and traversal. Managed dynamic memory and designed functions to find maximum values</p>
-                    <div class="skillsGained">
-                        <p>
-                            <strong>Skills:</strong>
-                            <span class="skills">
-                            <span>C++</span>
-                            <span>Data Structures</span>
-                            <span>Dynamic Memory</span>
-                            <span>Recursion</span>
-                            <span>Problem-Solving</span>
-                            <span>Algorithm Design</span>
-                            </span>
-                        </p>
+            </article>
+
+            <article class="project-card is-extra" data-category="technical">
+                <!-- Illustrative photo by Adi Goldstein on Unsplash -->
+                <img src="image/projects/networking.jpg" alt="Close-up of a glowing teal circuit board" loading="lazy">
+                <div class="project-body">
+                    <span class="project-tag">Technical</span>
+                    <h3>Home Network Simulation</h3>
+                    <p class="project-desc">Designed a smart home network in Cisco Packet Tracer, with IP addressing and remote control features.</p>
+                    <div class="skills">
+                        <span>Network Design</span>
+                        <span>IP Addressing</span>
+                        <span>Cisco Packet Tracer</span>
+                        <span>Troubleshooting</span>
                     </div>
                 </div>
-                <div class="projectImage">
-                    <img src="image/projects/C++.jpg" alt="Abby's C++ linked list project">
+            </article>
+
+            <article class="project-card is-extra" data-category="technical">
+                <img src="image/projects/C++.jpg" alt="C++ code for printing the contents of a linked list" loading="lazy">
+                <div class="project-body">
+                    <span class="project-tag">Technical</span>
+                    <h3>Linked List Operations in C++</h3>
+                    <p class="project-desc">Implemented a singly linked list with recursive insertion, deletion and traversal, managing dynamic memory by hand.</p>
+                    <div class="skills">
+                        <span>C++</span>
+                        <span>Data Structures</span>
+                        <span>Recursion</span>
+                        <span>Dynamic Memory</span>
+                    </div>
                 </div>
-            </div>
+            </article>
+        </div>
+
+        <div class="show-more-wrap">
+            <button type="button" class="show-more" hidden>Show more projects</button>
         </div>
     </section>
 

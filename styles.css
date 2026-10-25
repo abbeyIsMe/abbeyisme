@@ -506,7 +506,20 @@ li.edu-item {
     transition: transform 0.3s ease;
 }
 
+.skills-group {
+    margin-bottom: 1.2rem;
+}
+
+.skills-group h4 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #5a6b60;
+    margin-bottom: 0.5rem;
+}
+
 .skills-block,
+.skills-group .skills,
 p .skills {
     display: flex;
     flex-wrap: wrap;

@@ -70,18 +70,19 @@
                         </div>
                     </div>
                     <div class="field">
-                        <label for="email">Email</label>
-                        <input id="email" type="email" name="email" required>
+                        <label for="email">Email (or phone)</label>
+                        <input id="email" type="email" name="email" aria-describedby="contact-error">
                     </div>
                     <div class="field">
-                        <label for="phone">Phone</label>
-                        <input id="phone" type="tel" name="phone">
+                        <label for="phone">Phone (or email)</label>
+                        <input id="phone" type="tel" name="phone" aria-describedby="contact-error">
                     </div>
+                    <p id="contact-error" class="form-error" role="alert" hidden></p>
                     <div class="field">
-                        <label for="message">Message</label>
+                        <label for="message">Message *</label>
                         <textarea id="message" rows="5" name="message" required></textarea>
                     </div>
-                    <small class="privacy-note">* I respect your privacy. Your info will only be used to reply to your message</small>
+                    <small class="privacy-note">I respect your privacy. Your info will only be used to reply to your message</small>
                     <button type="submit" class="submit-btn">Send</button>
                 </form>
 

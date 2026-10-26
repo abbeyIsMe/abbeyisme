@@ -356,7 +356,8 @@ li.edu-item {
     margin: auto;
 }
 
-.experience-section h4 {
+.experience-section h4,
+.page-subtitle {
     font-weight: bold;
     color: #5a6b60;
     text-align: center;
@@ -593,7 +594,7 @@ li.edu-item {
     color: #2d5a3d;
 }
 
-.project-card h3 {
+.project-card h2 {
     margin: 0;
     font-size: 1.1rem;
     line-height: 1.3;
@@ -687,7 +688,7 @@ li.edu-item {
     padding: 2rem 2.25rem;
 }
 
-.project-list:not(.is-filtered) .featured h3 {
+.project-list:not(.is-filtered) .featured h2 {
     font-size: 1.6rem;
 }
 
@@ -861,6 +862,12 @@ p .skills {
 .contact-line a {
     min-width: 0;
     overflow-wrap: anywhere;
+}
+
+.form-error {
+    margin: 0.5em 0 0;
+    font-size: 13px;
+    color: #b42318;
 }
 
 .contact-right {

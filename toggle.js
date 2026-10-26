@@ -113,3 +113,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
     render();
 });
+
+// Contact page: ask for at least one way to reply (email or phone)
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('form.contact-right');
+
+    if (!form) {
+        return;
+    }
+
+    const email = form.querySelector('#email');
+    const phone = form.querySelector('#phone');
+    const error = form.querySelector('#contact-error');
+
+    if (!email || !phone || !error) {
+        return;
+    }
+
+    function clearError() {
+        error.textContent = '';
+        error.hidden = true;
+    }
+
+    // The browser's own checks (required message, email format) run before this submit event
+    form.addEventListener('submit', (event) => {
+        if (email.value.trim() === '' && phone.value.trim() === '') {
+            event.preventDefault();
+            error.hidden = false;
+            error.textContent = 'Please provide an email or a phone number so I can reply.';
+            email.focus();
+        }
+    });
+
+    email.addEventListener('input', clearError);
+    phone.addEventListener('input', clearError);
+});

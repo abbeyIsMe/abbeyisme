@@ -100,26 +100,51 @@ nav a.active {
     color: #7eb89a;
 }
 
-.hero-cta {
+.hero-actions {
     display: flex;
     justify-content: center;
-    padding: 2.5rem 1rem;
-    background: #f4f6f4;
+    gap: 12px;
+    margin-top: 1.5rem;
 }
 
 .hero-btn {
+    display: inline-block;
     background: #2d5a3d;
     color: #fff;
     text-decoration: none;
     padding: 0.85rem 2rem;
+    border: 1.5px solid #2d5a3d;
     border-radius: 8px;
     font-weight: 600;
     font-size: 1rem;
-    transition: background 0.2s;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 
 .hero-btn:hover {
     background: #243f2f;
+    border-color: #243f2f;
+}
+
+.hero-btn-secondary {
+    background: transparent;
+    border-color: #fff;
+}
+
+.hero-btn-secondary:hover {
+    background: #fff;
+    border-color: #fff;
+    color: #2d5a3d;
+}
+
+@media (max-width: 619px) {
+    .hero-actions {
+        flex-direction: column;
+    }
+    .hero-btn {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
 }
 
 .abby-box h1 {
@@ -148,6 +173,8 @@ nav a.active {
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 0;
+    pointer-events: none;
     background: url('image/background.jpg') no-repeat center center/cover;
     background-attachment: fixed;
     /*Image by Becca Clark from Pixabay*/

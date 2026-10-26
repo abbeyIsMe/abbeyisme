@@ -852,6 +852,17 @@ p .skills {
     text-decoration: underline;
 }
 
+.contact-line {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.contact-line a {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
 .contact-right {
     display: flex;
     flex-direction: column;
@@ -1022,5 +1033,11 @@ a:hover i {
     }
     #contact {
         padding: 4em 3em;
+    }
+}
+
+@media (max-width: 619px) {
+    #contact {
+        padding: 2em 16px;
     }
 }

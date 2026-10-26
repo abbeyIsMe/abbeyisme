@@ -110,7 +110,9 @@
                             <img src="image/exp/digital-strategy.png" alt="BridgesPro Connect digital strategy work" class="carousel-slide">
                             <img src="image/exp/RaceForTheKids.jpg" alt="Volunteering at RBC Race for the Kids 2025" class="carousel-slide"> </div>
                         <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+                        <button class="carousel-btn carousel-toggle" type="button" aria-label="Pause slideshow" aria-pressed="false">&#10074;&#10074;</button>
                     </div>
+                    <div class="carousel-dots"></div>
                 </div>
             </div>
         </section>
@@ -119,18 +121,6 @@
         <p>© 2026 Hoang Phuong Anh Ho</p>
         <p>All rights reserved.</p>
     </footer>
-    <script>
-        const slides = document.querySelectorAll('.carousel-slide');
-        let current = 0;
-
-        function goTo(n) {
-            slides[current].classList.remove('active');
-            current = (n + slides.length) % slides.length;
-            slides[current].classList.add('active');
-        }
-        document.querySelector('.carousel-btn.prev').addEventListener('click', () => goTo(current - 1));
-        document.querySelector('.carousel-btn.next').addEventListener('click', () => goTo(current + 1));
-    </script>
 </body>
 
 </html>

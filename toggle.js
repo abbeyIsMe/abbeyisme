@@ -148,3 +148,120 @@ document.addEventListener('DOMContentLoaded', () => {
     email.addEventListener('input', clearError);
     phone.addEventListener('input', clearError);
 });
+
+// Experience page: image carousel with arrows, dots and autoplay
+document.addEventListener('DOMContentLoaded', () => {
+    const carousel = document.querySelector('.carousel');
+
+    if (!carousel) {
+        return;
+    }
+
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const prev = carousel.querySelector('.carousel-btn.prev');
+    const next = carousel.querySelector('.carousel-btn.next');
+    const playToggle = carousel.querySelector('.carousel-toggle');
+    const dotsWrap = document.querySelector('.carousel-dots');
+    const INTERVAL = 6000;
+
+    let current = Math.max(0, [...slides].findIndex((slide) => slide.classList.contains('active')));
+    let userPaused = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let hovering = false;
+    let keyboardFocus = false;
+    let timer = null;
+
+    const dots = [...slides].map((slide, i) => {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'carousel-dot';
+        dot.setAttribute('aria-label', `Show slide ${i + 1}`);
+        dot.addEventListener('click', () => {
+            goTo(i);
+            restart();
+        });
+        if (dotsWrap) {
+            dotsWrap.appendChild(dot);
+        }
+        return dot;
+    });
+
+    function goTo(n) {
+        slides[current].classList.remove('active');
+        current = (n + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        dots.forEach((dot, i) => dot.setAttribute('aria-current', String(i === current)));
+    }
+
+    function canPlay() {
+        return !userPaused && !hovering && !keyboardFocus && document.visibilityState === 'visible' && slides.length > 1;
+    }
+
+    // Starting afresh each time also gives arrow and dot clicks a full 6 seconds on the new slide
+    function restart() {
+        clearInterval(timer);
+        timer = canPlay() ? setInterval(() => goTo(current + 1), INTERVAL) : null;
+    }
+
+    function updateToggle() {
+        if (!playToggle) {
+            return;
+        }
+        playToggle.setAttribute('aria-pressed', String(userPaused));
+        playToggle.setAttribute('aria-label', userPaused ? 'Play slideshow' : 'Pause slideshow');
+        playToggle.innerHTML = userPaused ? '&#9654;&#xFE0E;' : '&#10074;&#10074;';
+    }
+
+    function isInside(element) {
+        return Boolean(element) && (carousel.contains(element) || (dotsWrap && dotsWrap.contains(element)));
+    }
+
+    if (prev) {
+        prev.addEventListener('click', () => {
+            goTo(current - 1);
+            restart();
+        });
+    }
+
+    if (next) {
+        next.addEventListener('click', () => {
+            goTo(current + 1);
+            restart();
+        });
+    }
+
+    if (playToggle) {
+        playToggle.addEventListener('click', () => {
+            userPaused = !userPaused;
+            updateToggle();
+            restart();
+        });
+    }
+
+    carousel.addEventListener('mouseenter', () => {
+        hovering = true;
+        restart();
+    });
+
+    carousel.addEventListener('mouseleave', () => {
+        hovering = false;
+        restart();
+    });
+
+    // Only keyboard focus pauses; a mouse click on a button also focuses it but shouldn't stop the slideshow
+    [carousel, dotsWrap].filter(Boolean).forEach((area) => {
+        area.addEventListener('focusin', (event) => {
+            keyboardFocus = event.target.matches(':focus-visible');
+            restart();
+        });
+        area.addEventListener('focusout', (event) => {
+            keyboardFocus = isInside(event.relatedTarget) && keyboardFocus;
+            restart();
+        });
+    });
+
+    document.addEventListener('visibilitychange', restart);
+
+    goTo(current);
+    updateToggle();
+    restart();
+});

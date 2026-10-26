@@ -470,6 +470,56 @@ li.edu-item {
     right: 10px;
 }
 
+.carousel-btn.carousel-toggle {
+    top: auto;
+    right: 10px;
+    bottom: 10px;
+    transform: none;
+    font-size: 0.85rem;
+}
+
+.carousel-btn:focus-visible,
+.carousel-dot:focus-visible {
+    outline: 2px solid #2d5a3d;
+    outline-offset: 2px;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+/* Each dot is a 24px tap target with a small visible circle */
+.carousel-dot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carousel-dot::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border: 1.5px solid #2d5a3d;
+    border-radius: 50%;
+    box-sizing: border-box;
+    transition: background-color 0.2s;
+}
+
+.carousel-dot[aria-current="true"]::before {
+    background: #2d5a3d;
+}
+
 .carousel-hint {
     font-size: 0.75rem;
     color: #5a6b60;

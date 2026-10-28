@@ -462,14 +462,6 @@ li.edu-item {
     background: #2d5a3d;
 }
 
-.carousel-btn.prev {
-    left: 10px;
-}
-
-.carousel-btn.next {
-    right: 10px;
-}
-
 .carousel-btn.carousel-toggle {
     top: auto;
     right: 10px;

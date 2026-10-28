@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
     phone.addEventListener('input', clearError);
 });
 
-// Experience page: image carousel with arrows, dots and autoplay
+// Experience page: image carousel with dots and autoplay
 document.addEventListener('DOMContentLoaded', () => {
     const carousel = document.querySelector('.carousel');
 
@@ -158,11 +158,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const slides = carousel.querySelectorAll('.carousel-slide');
-    const prev = carousel.querySelector('.carousel-btn.prev');
-    const next = carousel.querySelector('.carousel-btn.next');
     const playToggle = carousel.querySelector('.carousel-toggle');
     const dotsWrap = document.querySelector('.carousel-dots');
-    const INTERVAL = 6000;
+    const INTERVAL = 4000;
 
     let current = Math.max(0, [...slides].findIndex((slide) => slide.classList.contains('active')));
     let userPaused = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -196,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return !userPaused && !hovering && !keyboardFocus && document.visibilityState === 'visible' && slides.length > 1;
     }
 
-    // Starting afresh each time also gives arrow and dot clicks a full 6 seconds on the new slide
+    // Starting afresh each time also gives dot clicks a full 4 seconds on the new slide
     function restart() {
         clearInterval(timer);
         timer = canPlay() ? setInterval(() => goTo(current + 1), INTERVAL) : null;
@@ -213,20 +211,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function isInside(element) {
         return Boolean(element) && (carousel.contains(element) || (dotsWrap && dotsWrap.contains(element)));
-    }
-
-    if (prev) {
-        prev.addEventListener('click', () => {
-            goTo(current - 1);
-            restart();
-        });
-    }
-
-    if (next) {
-        next.addEventListener('click', () => {
-            goTo(current + 1);
-            restart();
-        });
     }
 
     if (playToggle) {

@@ -191,6 +191,106 @@ nav a.active {
 }
 
 
+/* Home page sections below the hero */
+.home-section {
+    padding: 56px 1.5rem;
+    background: #f4f6f4;
+}
+
+.home-section+.home-section {
+    border-top: 1px solid #d8e0da;
+}
+
+.home-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.home-title {
+    margin: 0;
+    font-size: 1.75rem;
+    line-height: 1.25;
+    color: #2d5a3d;
+}
+
+.home-label {
+    margin: 0 0 0.5rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #3d5a48;
+}
+
+.home-link {
+    font-weight: 600;
+    color: #2d5a3d;
+    text-decoration: none;
+}
+
+.home-link:hover {
+    text-decoration: underline;
+}
+
+.home-link:focus-visible {
+    outline: 2px solid #2d5a3d;
+    outline-offset: 3px;
+}
+
+.home-work-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+}
+
+.home-work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.home-about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 40px;
+}
+
+.home-about-text {
+    margin: 0 0 1rem;
+    line-height: 1.65;
+    color: #1a2420;
+}
+
+.home-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+}
+
+.home-cta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+@media (max-width: 619px) {
+    .home-work-grid,
+    .home-about-grid {
+        grid-template-columns: 1fr;
+    }
+    .home-about-grid {
+        gap: 1.25rem;
+    }
+    .home-work-header,
+    .home-cta-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
 /* AboutPage */
 
 .container {
@@ -297,12 +397,87 @@ nav a.active {
     color: #111;
 }
 
-.footer {
-    text-align: center;
+/* Shared footer */
+.site-footer {
+    padding: 2.5rem 1.5rem 1.5rem;
+    color: #1e3a2a;
+    background: #eef1ee;
+}
+
+.site-footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+.site-footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.site-footer-name {
+    font-size: 1.35rem;
+    font-weight: 600;
+}
+
+.site-footer .site-footer-tagline {
+    margin-top: 0.25rem;
     font-size: 0.85rem;
-    margin: 2em;
-    color: #2d5a3d;
-    border-top: 2px solid #ccd8cc;
+    color: #3d5a48;
+}
+
+.site-footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.35rem;
+    font-size: 0.95rem;
+}
+
+.site-footer-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.site-footer a {
+    color: #1e3a2a;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+.site-footer a:focus-visible {
+    outline: 2px solid #2d5a3d;
+    outline-offset: 2px;
+}
+
+.site-footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    font-size: 0.82rem;
+    color: #3d5a48;
+    border-top: 1px solid #cfd8d1;
+}
+
+@media (max-width: 619px) {
+    .site-footer-top,
+    .site-footer-bottom {
+        flex-direction: column;
+    }
+    .site-footer-links {
+        align-items: flex-start;
+    }
 }
 
 .edu-item {
@@ -356,14 +531,6 @@ li.edu-item {
     margin: auto;
 }
 
-.experience-section h4,
-.page-subtitle {
-    font-weight: bold;
-    color: #5a6b60;
-    text-align: center;
-    margin: 3em 0 0 0;
-}
-
 .experience-text {
     display: flex;
     flex-direction: column;
@@ -402,6 +569,13 @@ li.edu-item {
 .experience-section {
     flex: 1 1 auto;
     min-width: 0;
+    padding-top: 3rem;
+}
+
+/* Line the header up with the experience text, which is inset by its own padding */
+.experience-section>.page-title,
+.experience-section>.page-subtitle {
+    padding: 0 10px;
 }
 
 .experience-image .carousel {
@@ -553,13 +727,14 @@ li.edu-item {
     padding: 3rem 1.5rem 4rem;
 }
 
-#projects h1 {
+/* Shared page header (Projects and Experience) */
+.page-title {
     margin: 0 0 0.25rem;
     font-size: 2.1rem;
     color: #1a2420;
 }
 
-.projects-sub {
+.page-subtitle {
     margin: 0 0 1.75rem;
     color: #5a6b60;
 }
@@ -1023,9 +1198,9 @@ a:hover i {
         gap: 1em;
     }
     /*Experiences*/
-    .experience-text h4 {
-        color: #5a6b60;
-        text-align: center;
+    .experience-section>.page-title,
+    .experience-section>.page-subtitle {
+        padding: 0 1.5rem;
     }
     .experience-container {
         flex-direction: row;

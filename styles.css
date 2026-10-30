@@ -192,6 +192,7 @@ nav a.active {
 
 
 /* Home page sections below the hero */
+
 .home-section {
     padding: 56px 1.5rem;
     background: #f4f6f4;
@@ -291,6 +292,7 @@ nav a.active {
     }
 }
 
+
 /* AboutPage */
 
 .container {
@@ -323,7 +325,7 @@ nav a.active {
     border-radius: 20px;
     text-align: center;
     height: fit-content;
-    /* margin-top: 3em; */
+    margin-top: 3em;
 }
 
 .intro img {
@@ -397,7 +399,9 @@ nav a.active {
     color: #111;
 }
 
+
 /* Shared footer */
+
 .site-footer {
     padding: 2.5rem 1.5rem 1.5rem;
     color: #f1f5f2;
@@ -595,15 +599,19 @@ li.edu-item {
     justify-content: flex-start;
 }
 
+
 /* The slides are absolutely positioned, so the carousel has no width of its own:
    let the Experience section fill the page and keep the frame at its 4:3 ratio */
+
 .experience-section {
     flex: 1 1 auto;
     min-width: 0;
     padding-top: 3rem;
 }
 
+
 /* Line the header up with the experience text, which is inset by its own padding */
+
 .experience-section>.page-title,
 .experience-section>.page-subtitle {
     padding: 0 10px;
@@ -639,7 +647,9 @@ li.edu-item {
     transition: opacity 0.4s ease;
 }
 
+
 /* Slides set their own transition, so keep the blur-up fade alongside the slide fade */
+
 .carousel .carousel-slide.blur-up {
     transition: opacity 0.4s ease, filter 0.4s ease;
 }
@@ -694,7 +704,9 @@ li.edu-item {
     margin-top: 0.5rem;
 }
 
+
 /* Each dot is a 24px tap target with a small visible circle */
+
 .carousel-dot {
     display: flex;
     align-items: center;
@@ -758,7 +770,9 @@ li.edu-item {
     padding: 3rem 1.5rem 4rem;
 }
 
+
 /* Shared page header (Projects and Experience) */
+
 .page-title {
     margin: 0 0 0.25rem;
     font-size: 2.1rem;
@@ -922,7 +936,9 @@ li.edu-item {
     border-radius: 6px;
 }
 
+
 /* The featured layout only applies in the "All" view */
+
 .project-list:not(.is-filtered) .featured {
     grid-column: 1 / -1;
     flex-direction: row;
@@ -1147,7 +1163,9 @@ p .skills {
     text-decoration: none;
 }
 
+
 /* Keep the email on one line wherever the column is wide enough for it */
+
 @media (min-width: 1000px) {
     .contact-info a {
         white-space: nowrap;
@@ -1259,7 +1277,9 @@ p .skills {
     background: #243f2f;
 }
 
+
 /* The form's 1.35rem gap plus this makes 1.4rem between the privacy note and the button */
+
 .privacy-note+.submit-btn {
     margin-top: 0.05rem;
 }

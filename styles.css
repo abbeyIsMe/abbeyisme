@@ -1164,6 +1164,12 @@ p .skills {
     margin-top: 1.75rem;
 }
 
+.contact-social a,
+.contact-social a:hover,
+.contact-social a:focus {
+    text-decoration: none;
+}
+
 .contact-social a {
     display: flex;
     align-items: center;
@@ -1251,6 +1257,11 @@ p .skills {
 
 .submit-btn:hover {
     background: #243f2f;
+}
+
+/* The form's 1.35rem gap plus this makes 1.4rem between the privacy note and the button */
+.privacy-note+.submit-btn {
+    margin-top: 0.05rem;
 }
 
 @media (max-width: 759px) {

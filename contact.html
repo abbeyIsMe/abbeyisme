@@ -7,15 +7,6 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="toggle.js"></script>
-    <style>
-        .privacy-note {
-            font-size: 0.85rem;
-            color: #555;
-            margin-top: 10px;
-            margin-bottom: -5px;
-            font-style: italic;
-        }
-    </style>
     <title>Contact | Abby Ho</title>
     <link rel="icon" type="image/png" href="image/favicon.png">
     <meta name="description" content="Reach out to Abby for work, or just to say hello">
@@ -45,47 +36,54 @@
     <section id="contact">
         <div class="contact-container">
             <div class="contact-card">
-                <div class="contact-left">
-                    <h1>Contact</h1>
-                    <p>
-                        I'd love to hear from you. Whether it's a project opportunity or just a quick message, feel free to reach out
-                    </p>
-                    <p class="contact-info">
-                        <span class="contact-line">✉️ <a href="mailto:hoangphuonganhho@gmail.com">hoangphuonganhho@gmail.com</a></span>
-                        <span class="contact-line">📞 <a href="tel:+12365913322">236 591 3322</a></span>
-                    </p>
-                    <div class="media">
-                        <a href="https://www.linkedin.com/in/hoang-phuong-anh-ho-a135b027a" aria-label="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                        <!-- <a href="https://www.instagram.com/iamabbeyyyy/" aria-label="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a> -->
-                        <a href="https://wa.me/12365913322" aria-label="WhatsApp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-                    </div>
+                <div class="contact-intro">
+                    <p class="contact-label">Contact</p>
+                    <h1>Good work starts with a hello.</h1>
+                    <p class="contact-lead">I'd love to hear from you. Whether it's a project opportunity or just a quick message, feel free to reach out.</p>
                 </div>
-                <form method="POST" action="https://formsubmit.co/hoangphuonganhho@gmail.com" class="contact-right">
-                    <input type="hidden" name="_next" value="#thanks">
 
-                    <div class="name-row">
-                        <div class="field">
-                            <label for="first">Full name</label>
-                            <input id="first" type="text" name="name" required>
+                <div class="contact-columns">
+                    <div class="contact-left">
+                        <p class="contact-label">Find me here</p>
+                        <ul class="contact-info">
+                            <li><i class="fa-regular fa-envelope" aria-hidden="true"></i><a href="mailto:hoangphuonganhho@gmail.com">hoangphuonganhho@gmail.com ↗</a></li>
+                            <li><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:+12365913322">236 591 3322 ↗</a></li>
+                        </ul>
+                        <div class="contact-social">
+                            <a href="https://www.linkedin.com/in/hoang-phuong-anh-ho-a135b027a" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+                            <a href="https://wa.me/12365913322" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
                         </div>
                     </div>
-                    <div class="field">
-                        <label for="email">Email (or phone)</label>
-                        <input id="email" type="email" name="email" aria-describedby="contact-error">
-                    </div>
-                    <div class="field">
-                        <label for="phone">Phone (or email)</label>
-                        <input id="phone" type="tel" name="phone" aria-describedby="contact-error">
-                    </div>
-                    <p id="contact-error" class="form-error" role="alert" hidden></p>
-                    <div class="field">
-                        <label for="message">Message *</label>
-                        <textarea id="message" rows="5" name="message" required></textarea>
-                    </div>
-                    <small class="privacy-note">I respect your privacy. Your info will only be used to reply to your message</small>
-                    <button type="submit" class="submit-btn">Send</button>
-                </form>
 
+                    <div class="contact-form-col">
+                        <p class="contact-label">Or leave a message</p>
+                        <form method="POST" action="https://formsubmit.co/hoangphuonganhho@gmail.com" class="contact-right">
+                            <input type="hidden" name="_next" value="#thanks">
+
+                            <div class="field">
+                                <label for="first">Full name</label>
+                                <input id="first" type="text" name="name" placeholder="Your full name" required>
+                            </div>
+                            <div class="field-row">
+                                <div class="field">
+                                    <label for="email">Email (or phone)</label>
+                                    <input id="email" type="email" name="email" placeholder="you@example.com" aria-describedby="contact-error">
+                                </div>
+                                <div class="field">
+                                    <label for="phone">Phone (or email)</label>
+                                    <input id="phone" type="tel" name="phone" placeholder="Your phone number" aria-describedby="contact-error">
+                                </div>
+                            </div>
+                            <p id="contact-error" class="form-error" role="alert" hidden></p>
+                            <div class="field">
+                                <label for="message">Message *</label>
+                                <textarea id="message" rows="5" name="message" placeholder="What would you like to talk about?" required></textarea>
+                            </div>
+                            <p class="privacy-note">Your information will only be used to reply to your message.</p>
+                            <button type="submit" class="submit-btn">Send message</button>
+                        </form>
+                    </div>
+                </div>
             </div>
 
             <div id="thanks">
@@ -104,14 +102,14 @@
                 <div class="site-footer-links">
                     <a href="mailto:hoangphuonganhho@gmail.com">hoangphuonganhho@gmail.com ↗</a>
                     <div class="site-footer-social">
-                        <a href="https://www.linkedin.com/in/hoang-phuong-anh-ho-a135b027a" target="_blank" rel="noopener">LinkedIn ↗</a>
-                        <a href="https://wa.me/12365913322" target="_blank" rel="noopener">WhatsApp ↗</a>
+                        <a href="https://www.linkedin.com/in/hoang-phuong-anh-ho-a135b027a" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+                        <a href="https://wa.me/12365913322" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
             <div class="site-footer-bottom">
                 <p>© 2026 Hoang Phuong Anh Ho</p>
-                <p>Based in Vancouver, BC</p>
+                <p class="site-footer-location"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span class="sr-only">Based in </span>Vancouver, BC</p>
             </div>
         </div>
     </footer>

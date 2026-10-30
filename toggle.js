@@ -249,3 +249,33 @@ document.addEventListener('DOMContentLoaded', () => {
     updateToggle();
     restart();
 });
+
+// Blur-up images: show the tiny placeholder first, then swap in the full image once it has downloaded
+function loadFullImage(img) {
+    const full = new Image();
+    full.onload = () => {
+        img.src = full.src;
+        img.classList.add('loaded');
+    };
+    full.src = img.dataset.src;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Lazy images wait until they are near the screen, so their full files still load on demand
+    const observer = 'IntersectionObserver' in window ? new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                observer.unobserve(entry.target);
+                loadFullImage(entry.target);
+            }
+        });
+    }, { rootMargin: '200px' }) : null;
+
+    document.querySelectorAll('img.blur-up[data-src]').forEach((img) => {
+        if (observer && img.loading === 'lazy') {
+            observer.observe(img);
+        } else {
+            loadFullImage(img);
+        }
+    });
+});

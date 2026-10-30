@@ -143,17 +143,6 @@
         <p>© 2026 Hoang Phuong Anh Ho</p>
         <p>All rights reserved.</p>
     </footer>
-    <script>
-        // Show the tiny blurred image first, then swap in the sharp one once it has downloaded
-        document.querySelectorAll('img.blur-up').forEach((img) => {
-            const full = new Image();
-            full.onload = () => {
-                img.src = full.src;
-                img.classList.add('loaded');
-            };
-            full.src = img.dataset.src;
-        });
-    </script>
 </body>
 
 </html>

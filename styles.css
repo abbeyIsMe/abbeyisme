@@ -1194,20 +1194,10 @@ p .skills {
     outline-offset: 3px;
 }
 
-.form-error {
-    margin: 0.5em 0 0;
-    font-size: 13px;
-    color: #b42318;
-}
-
 .contact-right {
     display: flex;
     flex-direction: column;
     gap: 1.35rem;
-}
-
-.contact-right>.form-error {
-    margin-top: -0.85rem;
 }
 
 .field-row {

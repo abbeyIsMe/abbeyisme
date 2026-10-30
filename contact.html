@@ -66,15 +66,14 @@
                             </div>
                             <div class="field-row">
                                 <div class="field">
-                                    <label for="email">Email (or phone)</label>
-                                    <input id="email" type="email" name="email" placeholder="you@example.com" aria-describedby="contact-error">
+                                    <label for="email">Email *</label>
+                                    <input id="email" type="email" name="email" placeholder="you@example.com" required>
                                 </div>
                                 <div class="field">
-                                    <label for="phone">Phone (or email)</label>
-                                    <input id="phone" type="tel" name="phone" placeholder="Your phone number" aria-describedby="contact-error">
+                                    <label for="phone">Phone</label>
+                                    <input id="phone" type="tel" name="phone" placeholder="Your phone number">
                                 </div>
                             </div>
-                            <p id="contact-error" class="form-error" role="alert" hidden></p>
                             <div class="field">
                                 <label for="message">Message *</label>
                                 <textarea id="message" rows="5" name="message" placeholder="What would you like to talk about?" required></textarea>
